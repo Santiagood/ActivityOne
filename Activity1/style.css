@@ -1,0 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#navv {
+	padding-bottom: 50px;
+}
+
+.collapsible {
+	align-items: center;
+}
+
+.card {
+	margin: 50px;
+}
