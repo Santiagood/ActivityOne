@@ -1,0 +1,23 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	align-items: center;
+	text-align: center;
+	background-color: lightgray;
+}
+
+#title {
+	color: white;
+}
+
+.Selection {
+	margin: 20px;
+	size: 10px;
+}
+
+.img-padding {
+	padding: 20px;
+}
