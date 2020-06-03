@@ -4,10 +4,6 @@
     margin: auto;
 }
 
-#submit, #like, #comment {
-    float: right;
-}
-
 #navv {
     padding-bottom: 60px;
 }
