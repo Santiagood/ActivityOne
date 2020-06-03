@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Literature</title>
+        <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.css">
+        <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css">
+        <link rel="stylesheet" href="paperStyle.css">
+    </head>
+    <body>
+        <!--NavBar-->
+        <div id="navv">
+        <nav class="border fixed split-nav">
+            <div class="nav-brand">
+              <h3><a href="paperSite.html">Literature</a></h3>
+            </div>
+            <div class="collapsible">
+              <input id="collapsible1" type="checkbox" name="collapsible1">
+              <button>
+              <label for="collapsible1">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </label>
+              </button>
+              <div class="collapsible-body">
+                <ul class="inline">
+                  <li><a href="paperSite_article.html">Article Search</a></li>
+                  <li><a href="paperSite.html">Book Search</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+          <!--form-->
+        <form id="searchBAR" action="https://booksc.xyz/s/">
+          <div class="col sm-8">
+            <div class="form-group">
+              <label for="paperInputs3">Search for articles</label>
+              <input class="input-block" type="text" id="paperInputs3" name="q" required>
+              <button id="submit" class="btn-small" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+    </body>
+</html>

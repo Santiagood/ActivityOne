@@ -1,0 +1,33 @@
+
+* {
+    padding: 3px;
+    margin: auto;
+}
+
+#submit, #like, #comment {
+    float: right;
+}
+
+#navv {
+    padding-bottom: 60px;
+}
+
+#like:hover {
+    background-color: lightblue;
+}
+
+#like:active {
+    background-color: darkblue;
+}
+
+#comment:hover {
+    background-color: pink;
+}
+
+#comment:active {
+    background-color: red;
+}
+
+#searchBAR {
+    padding-top: 10%;
+}
