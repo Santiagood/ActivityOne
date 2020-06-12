@@ -3,3 +3,22 @@
     margin: 0px;
     padding: 0px;
 }
+
+body {
+    align-items: center;
+    align-content: center;
+}
+
+#color {
+    background-color: white;
+}
+
+.pad {
+    padding-top: 20px;
+}
+
+.img-size {
+    height: 40%;
+    width: 50%;
+    align-items: center;
+}
