@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,25 +8,98 @@
         <title>EXAM</title>
     </head>
     <body>
-        <ul class="nav nav-tabs bg-dark" id="MainTab">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="ako-tab" data-toggle="tab" href="#ako" role="tab" aria-controls="profile" aria-selected="false">Tungkol sa akin</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="art-tab" data-toggle="tab" href="#art" role="tab" aria-controls="profile" aria-selected="false">Mga art ng bunso kong kapatid</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="ngayon-tab" data-toggle="tab" href="#ngayon" role="tab" aria-controls="profile" aria-selected="false">Mga bagay na pinagkakaabalahan ko ngayon</a>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="MainTabContent">
-            <div class="tab-pane fade show active" id="ako" >
-
+        <!--TAB-->
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-welcome-tab" data-toggle="tab" href="#nav-welcome" role="tab" aria-controls="nav-home" aria-selected="true">Welcome</a>
+                <a class="nav-item nav-link" id="nav-download-tab" data-toggle="tab" href="#nav-download" role="tab" aria-controls="nav-profile" aria-selected="false">Find & Download</a>
+                <a class="nav-item nav-link" id="nav-install-tab" data-toggle="tab" href="#nav-install" role="tab" aria-controls="nav-install" aria-selected="false">Installation</a>
+                <a class="nav-item nav-link" id="nav-maintain-tab" data-toggle="tab" href="#nav-maintain" role="tab" aria-controls="nav-maintain" aria-selected="false">Maintenance</a>
             </div>
+        </nav>
+
+        <!--CONTENT-->
+        <div class="tab-content" id="nav-tabContent">
+            <!--welcome-->
+            <div class="tab-pane fade show active" id="nav-welcome" role="tabpanel" aria-labelledby="nav-welcome-tab">
+                <div class="jumbotron" id="color">
+                    <h1 class="display-4">Welcome to Gnu/Linux Installation Tutorial</h1>
+                    <p class="lead">Ang webpage na ito ay ginawa upang turuan ang isang baguhan kung pa-paano mag hanap, mag install, at mag maintain ng isang Gnu/linux operating system. Ang mga steps ay nakasulat sa filipino, mayroong din itong mga litrato upang mas madaling maintindahn ng kahit na sino.</p>
+                    <hr class="my-4">
+                    <p>
+                        <b>Mga requirements:</b>
+                        <ul>
+                            <li>Flashdrive na may kapasidad na hindi bababa sa 4GB.</li>
+                            <li>Internet Connection.</li>
+                        </ul>
+                        <b>Paalala:</b>
+                        <ul>
+                            <li>Kung nais mo lang masubukan ang operating system na ito, mas mabuting gumamit nalang muna ng virtual box upang hindi magdulot ng posibleng problema sa iyong system.</li>
+                            <li>Tandaan na laging gumawa ng backup ng mga mahahalagang files sa separate na drive upang hindi magdulot ng posibleng problema.</li>
+                            <li>Bago mag type ng mga command sa terminal ay mabuting basahin na muna ang manual.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!--download-->
+            <div class="tab-pane fade" id="nav-download" role="tabpanel" aria-labelledby="nav-download-tab">
+                <div class="accordion pad" id="accordionHead">
+                    <!--card-find-->
+                    <div class="card">
+                        <div class="card-header" id="header-card-find">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-find" aria-expanded="false" aria-controls="card-find">
+                                    Find Distribution
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="card-find" class="collapse" aria-labelledby="header-card-find" data-parent="#accordionHead">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <img src="./images/1.png" class="img-size" alt="...">
+                        </div>
+                    </div>
+                    <!--card-download-->
+                    <div class="card">
+                        <div class="card-header" id="header-card-download">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-download" aria-expanded="false" aria-controls="card-download">
+                                    Download Distribution
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="card-download" class="collapse" aria-labelledby="header-card-download" data-parent="#accordionHead">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <!--card-burn-->
+                    <div class="card">
+                        <div class="card-header" id="header-card-burn">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-burn" aria-expanded="false" aria-controls="card-burn">
+                                    Write to flashdrive/ Make Bootable drive
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="card-burn" class="collapse" aria-labelledby="header-card-burn" data-parent="#accordionHead">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--install-->
+            <div class="tab-pane fade" id="nav-install" role="tabpanel" aria-labelledby="nav-install-tab">Reymundo</div>
+            <!--maintain-->
+            <div class="tab-pane fade" id="nav-maintain" role="tabpanel" aria-labelledby="nav-maintain-tab">Santiago</div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
