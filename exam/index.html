@@ -121,6 +121,18 @@
                         </div>
                         <div id="card-install" class="collapse" aria-labelledby="header-card-install" data-parent="#accordionHead">
                             <div class="card-body">
+                                Ngayon na mayroon ka nang bootable drive na may lamang Fedora, isaksak mo ang flashdrive sa usb port ng iyong computer. I-restart ang computer, at pumunta sa bios.
+                                pagkatapos ay ilagay sa unahang boot order ang iyong flashdrive. I-save at mag-exit.<br><br>
+                                Ngayon, pag boot ng fedora ay makikita mo na may dalawang pwedeng pag-piliian; ang Start Fedora-Workstation-Live 32, at ang Test this media & start Fedora-Workstation-Live 32.
+                                Kung kampante ka na hindi corrupted at palyado ang bootable drive mo piliin mo ang nauna, ngunit mas maigi na piliin ang pangalawa upang maiwasan na corrupted ang ma-install sa iyong computer at hindi magdulot ng problema.
+                                Hintayin lamang na mag-boot sa main screen ang operating system. <br><br>
+                                At ngayon kung nasa main screen kana, makikita mo ang isang Welcome screen na may dalawang pwedeng pagpiliian, ang Try Fedora, at ang Install to Hard Drive.
+                                Piliin ang Install to Hard Drive. Sa Installation Page, bubungad ang piliian ng language, pumili ka ng naaangkop sa iyong nais gamitin.
+                                Pagtapos mapupunta ka sa Installation Summary, pindutin ang Keyboard na logo sa screen, piliin ang naaangkop sa keyboard layout na meron ka, at pagtapos ay pindutin ang done button.<br><br>
+                                Pagtapos mamili ng layout, pindutin naman ang logo ng hard-drive. Lagyan ng check ang hard-drive na nais mo pag-installan ng operating system, at pagtapos ay pindutin ang done button. Hintayin na mag sync in ang mga pinili, kapag wala ng warning maari na pindutin ang Begin Installation button<br><br>
+                                Matagal ang pag-install kaya naman dapat na maging mapagpasensya. Kapag tapos na ang pag install maari na pindutin ang Finish Installation button. I-restart ang iyong computer, ngunit wag mo na munang bunutin ang flashdrive na iyong sinaksak.<br><br>
+                                Pag balik, bubungad sayo ang isang Welcome screen. i-next lang, at fill-upan ang mga dapat na sagutin. Pag tapos ay may lalabas na help page, kung saan pwede mo matutunan kung paano gamitin ang Gnome Desktop Environment.<br><br>
+                                Tapos na! nakapag install kana, at Welcome sa Gnu/Linux Operating System.<br><br>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonInstall">View Video</button>
                             </div>
                         </div>
@@ -136,6 +148,11 @@
                         </div>
                         <div id="card-update" class="collapse" aria-labelledby="header-card-update" data-parent="#accordionHead">
                             <div class="card-body">
+                                Ngayon na tapos ka na mag install, dapat na mag update ka na ng system mo upang maging updated at ma-install ang ibang pang dependencies na kailangan ng iyong bagong operating system.<br><br>
+                                Pindutin ang windows key sa keyboard, o command key kung naka mac. I-search ang Terminal. Kapag nasa Terminal na kailangan mo I-type ang mga command na ito: <br><br>
+                                sudo dnf update <br><br>
+                                Pag tapos i-enter ay i-type mo naman ang iyong password. pagtapos ay hintayin, dahil mag s-syncronize pa muna ang iyong computer sa repositories ng fedora. Kapag tapos na
+                                may mag pprompt sayo kung nais mo i-install, at i-update ang mga sumusunod na application. I-type ang "y", at hintayin.<br><br>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonUpdate">View Image/s</button>
                             </div>
                         </div>
@@ -151,6 +168,11 @@
                         </div>
                         <div id="card-rpmfusion" class="collapse" aria-labelledby="header-card-rpmfusion" data-parent="#accordionHead">
                             <div class="card-body">
+                                Ang <a href="https://rpmfusion.org">RPM Fusion</a> ay isang software repositories na hindi pinayagan ng fedora/ redhat na isama sa default repositories nila, dahil sa
+                                ang mga software na laman nito ay hindi isang <a href="https://www.gnu.org/philosophy/">Free Software</a>, o ang mga license ng mga software dito ay proprietary. Ngunit mahalagang i-install ito dahil nandito ang ilan sa mga mahahalagang software na kailangan
+                                mo upang maging smooth at updated ang iyong system, kagaya ng latest Nvidia graphics driver, at Multimedia Codecs.<br><br>
+                                Upang maintall ang RPM fusion kailangan mo pumunta sa <a href="https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/">Fedora Docs</a>, at i-copy & paste ang command, o i-type sa Terminal ang mga command na ito: <br><br>
+                                sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm<br><br>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonRpm">View Image/s</button>
                             </div>
                         </div>
@@ -166,6 +188,10 @@
                         </div>
                         <div id="card-codec" class="collapse" aria-labelledby="header-card-codec" data-parent="#accordionHead">
                             <div class="card-body">
+                                Ang multimedia codecs ay isa sa pinaka mahalagang i-install pagtapos na magkaroon ka na ng connection sa RPM Fusion repositories.
+                                By default ang Fedora ay hindi nakakapag play ng mga videos, at music maliban sa may format na .mkv at .mp3. Kaya naman kung mayroon kang mga .mp4 na videos, at ibang format ng mga music ay hindi ito gagana.<br><br>
+                                Upang mainstall ang mga multimedia codecs na kailangan mo pwede ka pumunta sa <a href="https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/">Fedora Docs</a>, o kaya naman ay i-type ang command na ito: <br><br>
+                                sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel lame\* --exclude=lame-devel && sudo dnf group upgrade --with-optional Multimedia <br><br>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonCodec">View Image/s</button>
                             </div>
                         </div>
@@ -181,6 +207,12 @@
                         </div>
                         <div id="card-tlp" class="collapse" aria-labelledby="header-card-tlp" data-parent="#accordionHead">
                             <div class="card-body">
+                                Kung ikaw ay naka-laptop, ang isa sa pinaka unang naiisip mo ay kung ma-ooptimize mo ba ang battery ng laptop mo ng kagaya sa windows, kung ngayon ay
+                                naka Gnu/Linux ka na? Ang sagot ay Oo, especially kung naka Thinkpad na laptop ka. Ang sagot sa optimization ng battery para sa mga laptop sa Gnu/Linux ay
+                                <a href="https://linrunner.de/tlp/installation/index.html">TLP</a>. <br><br>Sa website ng TLP pindutin sa kaliwa, ang drop-down na may Fedora. Basahin ang documention at sundan ang mga kailangang gawin, o di kaya naman i-type ang command na ito sa Terminal: <br><br>
+                                sudo dnf install tlp tlp-rdw<br><br>
+                                Upang umipekto ang optimization na ito, kailangan mo i-restart ang iyong computer kapag tapos na mainstall nito. Kapag tapos nito ay automatic
+                                nang mag ooptimize ang TLP sa iyong laptop, kada bubuksan mo ito.<br><br>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonTlp">View Image/s</button>
                             </div>
                         </div>
