@@ -212,7 +212,7 @@
                                 <a href="https://linrunner.de/tlp/installation/index.html">TLP</a>. <br><br>Sa website ng TLP pindutin sa kaliwa, ang drop-down na may Fedora. Basahin ang documention at sundan ang mga kailangang gawin, o di kaya naman i-type ang command na ito sa Terminal: <br><br>
                                 sudo dnf install tlp tlp-rdw<br><br>
                                 Upang umipekto ang optimization na ito, kailangan mo i-restart ang iyong computer kapag tapos na mainstall nito. Kapag tapos nito ay automatic
-                                nang mag ooptimize ang TLP sa iyong laptop, kada bubuksan mo ito.<br><br>
+                                nang mag ooptimize ang TLP sa iyong laptop, kada bubuksan mo ito.
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonTlp">View Image/s</button>
                             </div>
                         </div>
@@ -223,6 +223,12 @@
 <!--#########################################################################################################################################################-->
             <!--maintain-->
             <div class="tab-pane fade" id="nav-maintain" role="tabpanel" aria-labelledby="nav-maintain-tab">
+                <form id="search" class="form-inline" action="https://ask.fedoraproject.org/search?">
+                    <div class="form-group" id="search">
+                        <input type="text" class="form-control form-control-lg" id="askfedora" name="q" placeholder="Ask for help: " required/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
                 <div class="accordion pad" id="accordionHead">
                     <!--card-maintenance-->
                     <div class="card">
@@ -247,22 +253,52 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td scope="row">Update</td>
+                                                <th scope="row">Update</td>
                                                 <td>sudo dnf update</td>
                                                 <td>update the fedora repository</td>
                                                 <td>yes</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"></th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th scope="row">Upgrade to the latest release</th>
+                                                <td>sudo dnf distro-sync</td>
+                                                <td>syncronize to the latest release</td>
+                                                <td>yes</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"></th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th scope="row">Search for software/ application</th>
+                                                <td>dnf search package-name</td>
+                                                <td>search to repositories for software correspond to your query</td>
+                                                <td>no</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Install software/ application</th>
+                                                <td>sudo dnf install package-name</td>
+                                                <td>install package/ software found in repositories that correspond to your query</td>
+                                                <td>yes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Update to the latest firmware</th>
+                                                <td>sudo service fwupd start && sudo fwupdmgr refresh && sudo fwupdmgr update</td>
+                                                <td>start, search, and update to the latest firmware update from vendor.</td>
+                                                <td>yes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Display linux process</th>
+                                                <td>top</td>
+                                                <td>Display all process in the terminal.</td>
+                                                <td>no</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Search for command</th>
+                                                <td>apropos command</td>
+                                                <td>search for definition of command</td>
+                                                <td>yes</td>
+                                            </tr>
+                                             <tr>
+                                                <th scope="row">Read manual</th>
+                                                <td>man package-name</td>
+                                                <td>read the full manual of a particular software or package.</td>
+                                                <td>no</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -294,18 +330,28 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td scope="row"></td>
+                                            <th scope="row">Introduction to linux</td>
                                             <td></td>
+                                            <td><a href="https://www.youtube.com/watch?v=wBp0Rb-ZJak">The Complete Linux Course: Beginner to Power User!</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Bash</th>
+                                            <td><a href="https://learnxinyminutes.com/docs/bash/">Learn X in Y minutes</a></td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"></th>
-                                            <td></td>
+                                            <th scope="row">Everything</th>
+                                            <td><a href="https://stackexchange.com/">StackExchange</a></td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"></th>
+                                            <th scope="row">Underground Linux Community Wiki</th>
+                                            <td><a href="https://wiki.installgentoo.com/wiki/Main_Page">InstallGentoo Wiki</a></td>
                                             <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Most detailed linux wiki</td>
+                                            <td><a href="https://wiki.archlinux.org/">ArchLinux Wiki</a></td>
                                             <td></td>
                                         </tr>
                                     </tbody>
